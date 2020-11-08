@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result id="26432a02-989a-46ad-8814-cec9f87137d9" name="T_AirPollutionLevel" result="Fail" start="2020-11-08T12:09:10.333" end="2020-11-08T12:10:18.309" jobId="20201108_210904_535">
+  <Step id="S96ac2798d43b49baaaf80a810cd8a341" type="Excel" name="OpenExcel" displayName="OpenExcel" depth="1" num="1" result="Pass" start="2020-11-08T12:09:10.364" end="2020-11-08T12:09:12.150">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+      <Variable name="inDraftSheetName" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'선별진료소(11.05.)'" />
+      <Variable name="inDraftExcelHandle" scope="Input" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+      <Variable name="inTotalRow" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" />
+      <Variable name="varResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varconResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNowArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAirLevel" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varStationIndex" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varLastCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextRow" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAddrErrorCount" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Integer" value="0" />
+      <Variable name="varDetailsAddr" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property key="Options_OnError" value="" runtimeType="String" visible="True" required="False" />
+      <Property key="Key_Description" value="" runtimeType="String" visible="True" required="False" />
+      <Property key="Output_OutputExcel" value="[output] this.inDraftExcelHandle" runtimeType="String" visible="True" required="True" />
+      <Property key="File_Path" value="'C:\\Temp\\선별진료소draft.xlsx'" runtimeType="String" visible="True" required="True" />
+      <Property key="File_Invisible" value="False" runtimeType="Boolean" visible="True" required="False" />
+      <Property key="File_ReadOnly" value="False" runtimeType="Boolean" visible="True" required="False" />
+      <Property key="File_Maximize" value="True" runtimeType="Boolean" visible="True" required="False" />
+      <Property key="File_ExecuteShell" value="False" runtimeType="Boolean" visible="True" required="False" />
+      <Property key="File_Timeout" value="60" runtimeType="Integer" visible="False" required="True" />
+      <Property key="File_UsePassword" value="False" runtimeType="Boolean" visible="True" required="False" />
+      <Property key="File_OpenPassword" value="" runtimeType="String" visible="False" required="False" />
+      <Property key="File_WritePassword" value="" runtimeType="String" visible="False" required="False" />
+    </Properties>
+  </Step>
+  <Step id="S0291f80d4cc54ea1ba41430135e973e9" type="Excel" name="GetRowCount" displayName="GetRowCount" depth="1" num="2" result="Pass" start="2020-11-08T12:09:12.180" end="2020-11-08T12:09:12.243">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+      <Variable name="inDraftSheetName" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'선별진료소(11.05.)'" />
+      <Variable name="inDraftExcelHandle" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="Workbook" />
+      <Variable name="inTotalRow" scope="Input" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+      <Variable name="varResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varconResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNowArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAirLevel" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varStationIndex" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varLastCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextRow" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAddrErrorCount" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Integer" value="0" />
+      <Variable name="varDetailsAddr" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property key="Options_OnError" value="" runtimeType="String" visible="True" required="False" />
+      <Property key="Key_Description" value="" runtimeType="String" visible="True" required="False" />
+      <Property key="Input_InputExcel" value="Workbook" runtimeType="Any" visible="True" required="True" />
+      <Property key="Output_OutputCount" value="[output] this.inTotalRow" runtimeType="String" visible="True" required="True" />
+      <Property key="Sheet_SheetName" value="'선별진료소(11.05.)'" runtimeType="String" visible="True" required="True" />
+    </Properties>
+  </Step>
+  <Step id="S4960b6b785a145d384bbcf9a756ab6e0" type="Flow" name="Loop" displayName="For" depth="1" num="3" result="Pass" start="2020-11-08T12:09:12.259" end="2020-11-08T12:09:12.274">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+      <Variable name="inDraftSheetName" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'선별진료소(11.05.)'" />
+      <Variable name="inDraftExcelHandle" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="Workbook" />
+      <Variable name="inTotalRow" scope="Input" declareType="Any" isChanged="false" isChangable="true" runtimeType="Integer" value="40" />
+      <Variable name="varResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varconResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNowArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAirLevel" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varStationIndex" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varLastCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextRow" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAddrErrorCount" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Integer" value="0" />
+      <Variable name="varDetailsAddr" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property key="Key_Description" value="" runtimeType="String" visible="True" required="False" />
+      <Property key="Conditions_InitializeIndex" value="2" runtimeType="Integer" visible="True" required="True" />
+      <Property key="Conditions_LoopCondition" value="True" runtimeType="Boolean" visible="True" required="True" />
+      <Property key="Conditions_UpdateIndex" value="2" runtimeType="Integer" visible="True" required="True" />
+    </Properties>
+  </Step>
+  <Step id="Sea63ec70e78a418386a4bf21399587fd" type="Excel" name="ReadString" displayName="ReadString" depth="2" num="4" result="Pass" start="2020-11-08T12:09:12.290" end="2020-11-08T12:09:12.321">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+      <Variable name="inDraftSheetName" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'선별진료소(11.05.)'" />
+      <Variable name="inDraftExcelHandle" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="Workbook" />
+      <Variable name="inTotalRow" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Integer" value="40" />
+      <Variable name="varResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varconResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNowArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAirLevel" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varStationIndex" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="true" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varLastCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextRow" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAddrErrorCount" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Integer" value="0" />
+      <Variable name="varDetailsAddr" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property key="Options_OnError" value="" runtimeType="String" visible="True" required="False" />
+      <Property key="Key_Description" value="시도 값 가져오기" runtimeType="String" visible="True" required="False" />
+      <Property key="Output_ReadData" value="this.varCityName : '인천'" runtimeType="String" visible="True" required="True" />
+      <Property key="Input_InputExcel" value="Workbook" runtimeType="Any" visible="True" required="True" />
+      <Property key="Sheet_SheetName" value="'선별진료소(11.05.)'" runtimeType="String" visible="True" required="True" />
+      <Property key="Sheet_Cell" value="'C2'" runtimeType="String" visible="True" required="True" />
+    </Properties>
+  </Step>
+  <Step id="Scc8fe2e9d29a400a946694ac21e6f6e5" type="Flow" name="Decision" displayName="If" depth="2" num="5" result="Pass" start="2020-11-08T12:09:12.337" end="2020-11-08T12:09:12.352">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+      <Variable name="inDraftSheetName" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'선별진료소(11.05.)'" />
+      <Variable name="inDraftExcelHandle" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="Workbook" />
+      <Variable name="inTotalRow" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Integer" value="40" />
+      <Variable name="varResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varconResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNowArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAirLevel" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varStationIndex" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="true" runtimeType="String" value="'인천'" />
+      <Variable name="varLastCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="true" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextRow" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAddrErrorCount" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Integer" value="0" />
+      <Variable name="varDetailsAddr" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property key="Key_Description" value="" runtimeType="String" visible="True" required="False" />
+      <Property key="Conditions_Expression" value="this.varCityName == this.varLastCityName" runtimeType="String" visible="False" required="True" />
+      <Property key="Conditions_CombineCondition" value="True" runtimeType="Boolean" visible="False" required="False" />
+      <Property key="Conditions_Expression1" value="False" runtimeType="Boolean" visible="True" required="True" />
+      <Property key="Conditions_AddCondition" value="" runtimeType="String" visible="True" required="False" />
+    </Properties>
+  </Step>
+  <Step id="S8a3e10cf7bc8434b959e8f0518879949" type="Flow" name="Else" displayName="Else" depth="3" num="6" result="Pass" start="2020-11-08T12:09:12.368" end="2020-11-08T12:09:12.384">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+      <Variable name="inDraftSheetName" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'선별진료소(11.05.)'" />
+      <Variable name="inDraftExcelHandle" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="Workbook" />
+      <Variable name="inTotalRow" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Integer" value="40" />
+      <Variable name="varResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varconResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNowArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAirLevel" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varStationIndex" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'인천'" />
+      <Variable name="varLastCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextRow" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAddrErrorCount" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Integer" value="0" />
+      <Variable name="varDetailsAddr" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property key="Key_Description" value="" runtimeType="String" visible="True" required="False" />
+    </Properties>
+  </Step>
+  <Step id="S520f434e31024c7eac77572bb3fa7542" type="Flow" name="Delay" displayName="Delay" depth="3" num="7" result="Pass" start="2020-11-08T12:09:12.399" end="2020-11-08T12:09:13.429">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+      <Variable name="inDraftSheetName" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'선별진료소(11.05.)'" />
+      <Variable name="inDraftExcelHandle" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="Workbook" />
+      <Variable name="inTotalRow" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Integer" value="40" />
+      <Variable name="varResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varconResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNowArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAirLevel" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varStationIndex" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'인천'" />
+      <Variable name="varLastCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextRow" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAddrErrorCount" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Integer" value="0" />
+      <Variable name="varDetailsAddr" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property key="Options_OnError" value="" runtimeType="String" visible="True" required="False" />
+      <Property key="Key_Description" value="" runtimeType="String" visible="True" required="False" />
+      <Property key="Conditions_Second" value="1" runtimeType="Integer" visible="True" required="True" />
+      <Property key="Conditions_Millisecond" value="0" runtimeType="Integer" visible="True" required="True" />
+    </Properties>
+  </Step>
+  <Step id="S3b09a8fe863844e4813988f7ba3e03f1" type="Net" name="SendRequest" displayName="SendRequest" depth="3" num="8" result="OnError" detail="연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다 210.99.81.18:80" start="2020-11-08T12:09:13.444" end="2020-11-08T12:09:34.601">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+      <Variable name="inDraftSheetName" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'선별진료소(11.05.)'" />
+      <Variable name="inDraftExcelHandle" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="Workbook" />
+      <Variable name="inTotalRow" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Integer" value="40" />
+      <Variable name="varResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="true" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varconResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNowArea" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAirLevel" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varStationIndex" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'인천'" />
+      <Variable name="varLastCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varNextRow" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varAddrErrorCount" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Integer" value="0" />
+      <Variable name="varDetailsAddr" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="Undefined" value="&lt;undefined&gt;" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property key="Options_OnError" value="T_E" runtimeType="String" visible="True" required="False" />
+      <Property key="Key_Description" value="" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_Response" value="[output] this.varResponse" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_URL" value="'http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=KqBE9gjG72nYHmtxmOJ21%2FvmIEONwImA%2BmS7NfiGuNfSUEmSkZdmUjOETdtYBC6IoemdO7jJlE5%2FuPFbjBfcGQ%3D%3D&amp;numOfRows=50&amp;sidoName=인천&amp;ver=1.0&amp;_returnType=json'" runtimeType="String" visible="True" required="True" />
+      <Property key="REST_Method" value="GET" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_Authorization" value="''" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_ContentType" value="application/json" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_Headers" value="'{&quot;key&quot;:&quot;value&quot;}'" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_Continuos" value="True" runtimeType="Boolean" visible="True" required="False" />
+      <Property key="REST_Body" value="''" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_FormData" value="'{\&quot;key\&quot;:\&quot;value\&quot;}'" runtimeType="String" visible="False" required="False" />
+    </Properties>
+  </Step>
+  <Step id="" type="Event" name="onError" displayName="onError (T_E)" depth="1" num="" result="Fail" detail="'T_E'의 스크립트를 초기화하는데 실패했습니다.&#xA;&#xA;Error Script (Line 5)&#xA;-&gt; this.senderName = this.sender.constructor.name;&#xA;=&gt; TypeError: Cannot read property 'constructor' of undefined" start="2020-11-08T12:09:34.601" end="2020-11-08T12:09:34.632">
+    <Task id="dbd6e242-aacc-4835-8806-9ee686997eae" name="T_E" result="Fail" detail="'T_E'의 스크립트를 초기화하는데 실패했습니다.&#xA;&#xA;Error Script (Line 5)&#xA;-&gt; this.senderName = this.sender.constructor.name;&#xA;=&gt; TypeError: Cannot read property 'constructor' of undefined" start="2020-11-08T12:09:34.601" end="2020-11-08T12:09:34.648" />
+  </Step>
+</Result>

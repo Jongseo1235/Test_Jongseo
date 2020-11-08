@@ -1,0 +1,136 @@
+
+<Project id="4f7bd7b2-677f-46bc-bc4f-92a2a297cdca" namespace="" name="Jongseo_API" desc="api 연습&#xD;&#xA;" category="project" workType="foreground" version="1.00" lastPublishedDate="" lastPublishedBy="" createdDate="2020-10-30 12:34:34" createdBy="" lastPublishedServer="" latestProcess="T_AirPollutionLevel" designerVersion="1.6.500.09031">
+  <SharedTask isExpended="false" />
+  <NormalTask isExpended="true">
+    <LinkItem id="26432a02-989a-46ad-8814-cec9f87137d9" category="NormalTask" isChanged="Y" desc="" name="T_AirPollutionLevel">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="8dd5469c-eba8-4d77-a562-d3dde5f1e9cb" category="NormalTask" isChanged="Y" desc="" name="T_S_BeforeTime">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="2e2529d6-e3bb-489b-aea0-1671324b9e6b" category="NormalTask" isChanged="Y" desc="" name="T_S_InputData">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="f7df1a97-95f9-4585-a751-707ec22583f9" category="NormalTask" isChanged="Y" desc="" name="T_S_OtherCityName">
+      <Properties />
+    </LinkItem>
+  </NormalTask>
+  <Event isExpended="true">
+    <LinkItem id="4f53246f-8872-4765-8bb2-43c832e03350" category="Event" isChanged="Y" desc="" name="E_AddrAPI">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="dbd6e242-aacc-4835-8806-9ee686997eae" category="Event" isChanged="Y" desc="" name="E_CityAPI">
+      <Properties />
+    </LinkItem>
+  </Event>
+  <Process isExpended="true">
+    <LinkItem id="dcd70cc4-0a42-4419-99d7-9fe9568247de" category="Process" isChanged="Y" desc="default process" name="MyProcess">
+      <Properties />
+    </LinkItem>
+  </Process>
+  <CustomLibraries isExpended="false">
+    <LinkItem id="2d55b807-ec2a-4281-963f-93fd116ae525" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddDay">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="1f39cc93-fb09-49a1-b849-3059e3d64c2b" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddHours">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="f8fbebd9-5ea3-49c3-810f-42c20a33e1fe" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddMinutes">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="7fe808df-c389-4870-8b01-38fa8d0e17b2" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddMonth">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="a98dcd05-3a7c-4903-a2e8-b80a8321f54b" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddSeconds">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="9a9c0afc-9e42-4e46-aa12-a90a43250b0e" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_AddYear">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="ddf154d4-d540-4da7-b266-c7d97f71397c" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetDate">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="12aa9743-6bb4-44cb-828b-18a1c9fd9487" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetDay">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="711d3d76-1b44-47da-a2d0-cac71297fb0d" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetFullYear">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="b36f0810-c026-49bd-a46e-ee4a82845295" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetHours">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="63031c32-2e11-4c6f-ad1f-c638d27772d9" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetMinutes">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="1c48fbb9-024b-4428-a030-03714d747b3f" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetMonth">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="1932a585-1ba7-4266-a657-12fc5988f2b6" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetSeconds">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="c5d9e688-284c-4dbe-9fc9-be15872bbf21" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_GetWeek">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="ca3121c1-c37d-426f-8b0f-1680d286e2d4" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_Now">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="d07b1b05-42a9-43b3-afcc-c07bd82b7853" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetDate">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="a9f2e973-b1d3-4b02-9564-6a2b742d6e38" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetFullYear">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="faeb818d-fe2f-4b32-b739-27f21806423b" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetHours">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="76a08cc7-7c87-4603-b987-d8538f456194" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetMinutes">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="05ff6a27-ebdb-4a99-a768-357d5045cc3b" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetMonth">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="3482564d-751c-405e-8e2d-54988bf2c8cf" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="DATE_SetSeconds">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="7e5456f7-4306-4e58-9c8f-178ea11e148b" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="STRING_GetLineCount">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="77c5b4bd-165d-4c2d-aa5d-20af16e3e454" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="STRING_IsAlpha">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="9da8c8f5-915b-495a-9b93-b33351249aef" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="STRING_IsAlphanum">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="88e61918-461d-46ac-b2df-77a0689a2fb4" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="STRING_IsLower">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="e74d729b-4c8d-4e9c-b649-066e3e2f9365" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="STRING_IsNumber">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="698a84e3-611d-485d-a8fa-ef2e3a3c03a6" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="STRING_IsSpaceChar">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="16ecc056-21a7-4cae-ab0a-64ee53cfaff1" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="STRING_IsUpper">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="2a3efbdc-c512-4803-9b8f-5e9eb7ba9151" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="STRING_IsValid">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="b4958beb-2314-463b-ac7e-85eff5fc6f23" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="STRING_IsValidFileName">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="2a8688fd-af7f-4c53-b0f5-c2658ccdb51e" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="STRING_ReplaceAll">
+      <Properties />
+    </LinkItem>
+    <LinkItem id="6d584cc9-5e92-4808-b90d-cd5425385a50" category="CustomLibrary" subCategory="JavaScript" externalLibrary="" isChanged="Y" desc="" name="STRING_Trim">
+      <Properties />
+    </LinkItem>
+  </CustomLibraries>
+  <LibraryTemplate isExpended="false" />
+  <Resources isExpended="false" />
+  <RemoteProcess isExpended="false" />
+  <Asset />
+  <Library />
+  <Variables />
+  <Properties />
+</Project>

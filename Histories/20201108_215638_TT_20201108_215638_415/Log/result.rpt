@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Result id="de6946e1-4308-4329-93bb-af5ecf362304" name="TT" result="Pass" start="2020-11-08T12:56:44.477" end="2020-11-08T12:57:32.756" jobId="20201108_215638_415">
+  <Step id="Sf4087a8264c84cb0aca3e37595848d31" type="Net" name="SendRequest" displayName="SendRequest" depth="1" num="1" result="OnError" detail="연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다 210.99.81.18:80" start="2020-11-08T12:56:44.530" end="2020-11-08T12:57:05.701">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+      <Variable name="varResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="true" runtimeType="Undefined" value="&lt;undefined&gt;" />
+      <Variable name="varCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'시울'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property key="Options_OnError" value="E_CityAPI" runtimeType="String" visible="True" required="False" />
+      <Property key="Key_Description" value="" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_Response" value="[output] this.varResponse" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_URL" value="'http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=KqBE9gjG72nYHmtxmOJ21%2FvmIEONwImA%2BmS7NfiGuNfSUEmSkZdmUjOETdtYBC6IoemdO7jJlE5%2FuPFbjBfcGQ%3D%3D&amp;numOfRows=150&amp;sidoName=시울&amp;ver=1.0&amp;_returnType=json'" runtimeType="String" visible="True" required="True" />
+      <Property key="REST_Method" value="GET" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_Authorization" value="''" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_ContentType" value="application/json" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_Headers" value="'{&quot;key&quot;:&quot;value&quot;}'" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_Continuos" value="True" runtimeType="Boolean" visible="True" required="False" />
+      <Property key="REST_Body" value="''" runtimeType="String" visible="True" required="False" />
+      <Property key="REST_FormData" value="'{\&quot;key\&quot;:\&quot;value\&quot;}'" runtimeType="String" visible="False" required="False" />
+    </Properties>
+  </Step>
+  <Step id="" type="Event" name="onError" displayName="onError (E_CityAPI)" depth="1" num="" result="Pass" start="2020-11-08T12:57:05.701" end="2020-11-08T12:57:05.718">
+    <Task id="dbd6e242-aacc-4835-8806-9ee686997eae" name="E_CityAPI" result="Pass" start="2020-11-08T12:57:05.701" end="2020-11-08T12:57:21.490">
+      <Step id="S34df4beb6c184e08a5591635aad0bc5d" type="Desktop" name="MessageBox" displayName="MessageBox" depth="1" num="1" result="Pass" start="2020-11-08T12:57:05.729" end="2020-11-08T12:57:10.210">
+        <Variables>
+          <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+          <Variable name="sender" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="[object Object]" />
+        </Variables>
+        <Properties setIndex="0">
+          <Property key="Options_OnError" value="" runtimeType="String" visible="True" required="False" />
+          <Property key="Key_Description" value="" runtimeType="String" visible="True" required="False" />
+          <Property key="Conditions_Arguments" value="'API 에러로 인해 15초 후 다시 요청 시작합니다.'" runtimeType="String" visible="True" required="False" />
+          <Property key="Command_Timeout" value="5" runtimeType="Integer" visible="True" required="False" />
+        </Properties>
+      </Step>
+      <Step id="Se5c25f551e0d4a68863508986fa1266b" type="Flow" name="Delay" displayName="Delay" depth="1" num="2" result="Pass" start="2020-11-08T12:57:10.226" end="2020-11-08T12:57:20.243">
+        <Variables>
+          <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+          <Variable name="sender" scope="Input" declareType="Any" isChanged="false" isChangable="false" runtimeType="Any" value="[object Object]" />
+        </Variables>
+        <Properties setIndex="0">
+          <Property key="Options_OnError" value="" runtimeType="String" visible="True" required="False" />
+          <Property key="Key_Description" value="" runtimeType="String" visible="True" required="False" />
+          <Property key="Conditions_Second" value="10" runtimeType="Integer" visible="True" required="True" />
+          <Property key="Conditions_Millisecond" value="0" runtimeType="Integer" visible="True" required="True" />
+        </Properties>
+      </Step>
+      <Step id="S1d7e06071de6458c9aedf961738c7dfd" type="Net" name="SendRequest" displayName="SendRequest" depth="1" num="3" result="Pass" start="2020-11-08T12:57:20.274" end="2020-11-08T12:57:21.480">
+        <Variables>
+          <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+          <Variable name="sender" scope="Input" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" value="[object Object]" />
+        </Variables>
+        <Properties setIndex="0">
+          <Property key="Options_OnError" value="--Retry--" runtimeType="String" visible="True" required="False" />
+          <Property key="Key_Description" value="" runtimeType="String" visible="True" required="False" />
+          <Property key="REST_Response" value="[output] this.sender.varResponse" runtimeType="String" visible="True" required="False" />
+          <Property key="REST_URL" value="'http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=KqBE9gjG72nYHmtxmOJ21%2FvmIEONwImA%2BmS7NfiGuNfSUEmSkZdmUjOETdtYBC6IoemdO7jJlE5%2FuPFbjBfcGQ%3D%3D&amp;numOfRows=150&amp;sidoName=시울&amp;ver=1.0&amp;_returnType=json'" runtimeType="String" visible="True" required="True" />
+          <Property key="REST_Method" value="GET" runtimeType="String" visible="True" required="False" />
+          <Property key="REST_Authorization" value="''" runtimeType="String" visible="True" required="False" />
+          <Property key="REST_ContentType" value="application/json" runtimeType="String" visible="True" required="False" />
+          <Property key="REST_Headers" value="'{&quot;key&quot;:&quot;value&quot;}'" runtimeType="String" visible="True" required="False" />
+          <Property key="REST_Continuos" value="True" runtimeType="Boolean" visible="True" required="False" />
+          <Property key="REST_Body" value="''" runtimeType="String" visible="True" required="False" />
+          <Property key="REST_FormData" value="'{\&quot;key\&quot;:\&quot;value\&quot;}'" runtimeType="String" visible="False" required="False" />
+        </Properties>
+      </Step>
+    </Task>
+  </Step>
+  <Step id="S47e7696231e0482da30997a005ab6f2d" type="Desktop" name="MessageBox" displayName="MessageBox" depth="1" num="2" result="Pass" start="2020-11-08T12:57:21.517" end="2020-11-08T12:57:32.756">
+    <Variables>
+      <Variable name="RESULT" scope="System" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" />
+      <Variable name="varResponse" scope="Normal" declareType="Any" isChanged="false" isChangable="true" runtimeType="Any" value="System.Dynamic.ExpandoObject" />
+      <Variable name="varCityName" scope="Normal" declareType="Any" isChanged="false" isChangable="false" runtimeType="String" value="'시울'" />
+    </Variables>
+    <Properties setIndex="0">
+      <Property key="Options_OnError" value="" runtimeType="String" visible="True" required="False" />
+      <Property key="Key_Description" value="" runtimeType="String" visible="True" required="False" />
+      <Property key="Conditions_Arguments" value="System.Dynamic.ExpandoObject" runtimeType="Any" visible="True" required="False" />
+      <Property key="Command_Timeout" value="&lt;undefined&gt;" runtimeType="Undefined" visible="True" required="False" />
+    </Properties>
+  </Step>
+</Result>
